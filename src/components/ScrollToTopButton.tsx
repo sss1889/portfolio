@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useModal } from '../context/ModalContext';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const {isAnyModalOpen} = useModal();
 
   // スクロール位置が100px以上になった場合にボタンを表示
   const toggleVisibility = () => {
@@ -27,6 +29,11 @@ export default function ScrollToTopButton() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+
+  if (isAnyModalOpen) {
+    return null; // モーダルが開いているときはボタンを表示しない
+  }
+  
   return (
     <>
       {isVisible && (
