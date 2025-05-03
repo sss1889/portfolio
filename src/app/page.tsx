@@ -325,7 +325,7 @@ export default function Home() {
           <div className="mt-3 flex flex-col items-center justify-center text-[#227BB7]">
                   <div className="flex items-center justify-center gap-2 mb-2 text-[18px]">
                     <Image src={githubIcon} alt="GitHub" width={22} height={22}/>
-                    <a href="https://github.com/sss1889/portfolio" target="_blank" rel="noopener noreferrer" className="hover:underline">View this in Repository</a>
+                    <a href="https://github.com/sss1889/portfolio" target="_blank" rel="noopener noreferrer" className="hover:underline">View Source Code</a>
                   </div>
                   <p>© 2025 Namiki Chikusa. All rights reserved.</p>
           </div>
