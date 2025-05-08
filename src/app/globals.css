@@ -52,9 +52,8 @@ body {
 
 /* 浮遊する円のアニメーション */
 .area {
-  background: #FFF9C4;
-  background: -webkit-linear-gradient(to left, #FFFDE7, #FFF9C4);
-  background: linear-gradient(to left, #FFFDE7, #FFF9C4);
+  background: #FFFDE7;
+
   width: 100%;
   min-height: 100vh;
   position: relative;

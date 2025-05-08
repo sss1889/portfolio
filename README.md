@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Namiki Chikusa - ポートフォリオサイト
 
-## Getting Started
+![Portfolio Preview](https://namiki-portfolio.vercel.app/og-image.png)
 
-First, run the development server:
+このリポジトリは、下記ポートフォリオサイトのソースコードです。
+普段は京都大学で学生をしながら、学生スタートアップ企業のエンジニアとして、主にバックエンドの開発に携わっています。
+詳しくは下記ページで見ていただけると幸いです。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**公開URL**: [https://namiki-portfolio.vercel.app/](https://namiki-portfolio.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## サイトの特徴
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **インタラクティブなUI**: アニメーションと動的な背景効果を使用した魅力的なユーザーインターフェース
+- **モバイル対応**: レスポンシブデザインで様々なデバイスに最適化
+- **プロジェクトモーダル**: 各プロジェクトの詳細を表示するモーダルウィンドウ
+- **アニメーションセクション**: スクロールに応じてコンテンツが表示されるアニメーション効果
+- **ホバーエフェクト**: 言語スキルにホバーすると詳細情報がツールチップで表示
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 使用技術
 
-## Learn More
+- **フレームワーク**: Next.js (React)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **アニメーション**: CSS Animations
+- **デプロイ**: Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## 主なコンポーネント
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `AnimatedSection`: スクロールに応じてコンテンツを表示するアニメーション
+- `ProjectButton` & `ProjectModal`: プロジェクト情報の表示と詳細モーダル
+- `LanguageWithTooltip`: ホバー時にツールチップを表示する言語情報
+- `ScrollToTopButton`: ページ上部に戻るボタン
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## コンテンツセクション
 
-## Deploy on Vercel
+- **プロフィール**: 基本情報と連絡先
+- **概要**: 自己紹介と目標
+- **学歴**: 京都大学、UC Santa Cruz
+- **職歴**: バックエンドエンジニアとしての経験
+- **スキル**: フロントエンド、バックエンド、ツール、その他の技術スキル
+- **プロジェクト**: 開発したプロジェクトの詳細
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## デプロイ
+このプロジェクトは Vercel にデプロイしています。変更を push すると自動的にデプロイが行われます。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 連絡先
+
+質問や提案がありましたら、以下の方法でご連絡ください：
+
+- Email: natsukirin65@gmail.com
+- GitHub: [sss1889](https://github.com/sss1889)
+- LinkedIn: [Namiki Chikusa](https://www.linkedin.com/in/namiki-chikusa-37b738301)
+
+
