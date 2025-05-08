@@ -2,6 +2,7 @@ import Image from "next/image";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import ProjectButton from "../components/ProjectButton";
 import AnimatedSection from "../components/AnimatedSection";
+import LanguageWithTooltip from "../components/LanguageWithTooltip";
 import linkedinIcon from "../image/icons8-linkedin-48.png";
 import githubIcon from "../image/icons8-github-50.png";
 import fastapiIcon from "../image/fastapi.png";
@@ -54,16 +55,17 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Image src={linkedinIcon} alt="LinkedIn" width={16} height={16}/>
-                    <a href="https://www.linkedin.com/in/namiki-chikusa" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedIn</a>
+                    <a href="https://www.linkedin.com/in/namiki-chikusa-37b738301" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedIn</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Image src={mailIcon} alt='mail' width={16} height={16}/> 
                     <a href="mailto:natsukirin65@gmail.com" className="hover:underline">natsukirin65@gmail.com</a>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={googletranslateIcon} alt='google translate' width={16} height={16}/>
-                    <span>Japanese, English</span>
-                  </div>
+                  <LanguageWithTooltip 
+                    icon={googletranslateIcon}
+                    languages="Japanese, English"
+                    tooltipContent="• 日本語: ネイティブ&#10;• 英語: ビジネスレベル (TOEIC 940点)&#10;• UC Santa Cruzで1年間の留学経験あり"
+                  />
                 </div>
               </div>
             </div>
@@ -135,7 +137,7 @@ export default function Home() {
                         <Image src={starupIcon} alt="Location" width={36} height={16} className='rounded-md'/>
                     <div className="font-bold text-xl">StarUp Inc.</div>
                   </div>
-                <div className="mt-2">Python（FastAPI）バックエンド開発、API/DB（MySQL）設計、実装を経験。API駆動開発を重視し、OpenAPI仕様ベースのRESTful API設計・実装を行い、また、Docker環境構築も行なっています。また、TypeScriptとNext.jsを用いたフロントエンド開発にも従事しています。
+                <div className="mt-2">Python（FastAPI）バックエンド開発、API/DB（MySQL）設計、実装を経験。API駆動開発を重視し、OpenAPI仕様ベースのRESTful API設計・実装を行い、加えて、Docker環境構築を行なったりもしています。また、TypeScriptとNext.jsを用いたフロントエンド開発にも従事しています。
                     テスト実装やドキュメント自動生成による品質・効率向上に加え、プルリクエストでの活発なコードレビューを通じて、チーム開発における品質担保、設計統一、パフォーマンス改善を推進してきました。</div>
               </div>
             </div>
@@ -284,7 +286,7 @@ export default function Home() {
             <div className="flex flex-col space-y-3">
               <ProjectButton 
                 image={kanjiIcon}
-                description="モバイルアプリケーション向けの漢字認識モデルを開発しました。PyTorchを用いて畳み込みニューラルネットワークを実装し、手書き漢字を高精度で認識できるシステムを構築しました。"
+                description="モバイルアプリケーション向けの漢字認識モデルを開発しました。TensorFlow/Kerasを用いて、漢字のストロークデータを解析し、画像からの認識精度を向上させるためのデータ拡張手法や転移学習を実施しました。量子化やプルーニング、蒸留技術を駆使して、モデルの軽量化と推論速度の向上も図りました。"
                 frameworks={["TensorFlow", "Keras", "OpenCV", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "Pickle"]}
                 methodologies={["データ拡張", "転移学習（比較検証）", "量子化", "プルーニング", "蒸留", "画像処理 (ストローク描画, バイナリデータ解析)"]}>
                 モバイルapp向け漢字認識モデル開発
@@ -308,7 +310,7 @@ export default function Home() {
                 バックエンド統括として、Python/FastAPIを用いたAPI/DB設計と実装を担当し、セール状況を考慮した8週間先までの売上予測ロジックと最適在庫算出アルゴリズムを実装しました。
                 4週間のリードタイムを考慮した自動発注提案フローを構築し、発注業務の大幅な効率化と在庫最適化に貢献することができました。
                 またフロントエンド開発にも部分的に関わり、Next.js/TypeScriptによる管理画面UIの改善も行いました。"
-                technologies={["Python","MySQL", "Docker", "TypeScript"]}
+                technologies={["Python","MySQL","TypeScript"]}
                 methodologies={["時系列分析", "需要予測", "在庫最適化", "自動発注アルゴリズム"]}
                 frameworks={["FastAPI", "Next.js","React", "Tailwind CSS", "TensorFlow", "scikit-learn", "SQLAlchemy"]}>
                 需要予測&在庫管理システム開発
