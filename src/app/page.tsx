@@ -32,12 +32,34 @@ import demandIcon from "../image/projects/demand.png";
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-[#EFF3F6] p-4 md:p-8">
+    <div className="area">
+      {/* 浮遊する円のアニメーション */}
+      <ul className="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       
-      <div className="max-w-6xl mx-auto space-y-6">
+      <div className="max-w-6xl mx-auto space-y-6 relative z-10 p-4 md:p-8">
         {/* Profile and Summary Section */}
         <div className="flex flex-col lg:flex-row gap-4">
-          {/* Profile Card */}
           <AnimatedSection direction="left" className="w-full lg:w-1/4">
             <div className="bg-[#FDFBCB] text-[#227BB7] rounded-lg p-6 shadow-md h-full">
               <div className="flex flex-col items-center">
@@ -333,7 +355,6 @@ export default function Home() {
           </div>
 
       </div>
-
       {/* スクロールトップボタン */}
       <ScrollToTopButton />
     </div>
