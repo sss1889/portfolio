@@ -1,0 +1,298 @@
+/* Material Design 3 Design Tokens */
+
+:root {
+  /* Primary Color - Blue (#227BB7) */
+  --md-sys-color-primary: #227bb7;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d4e4ff;
+  --md-sys-color-on-primary-container: #001d36;
+  
+  /* Primary Tonal Palette */
+  --md-ref-palette-primary0: #000000;
+  --md-ref-palette-primary10: #001d36;
+  --md-ref-palette-primary20: #003355;
+  --md-ref-palette-primary30: #004a77;
+  --md-ref-palette-primary40: #0062a0;
+  --md-ref-palette-primary50: #227bb7;
+  --md-ref-palette-primary60: #4995cd;
+  --md-ref-palette-primary70: #6baee3;
+  --md-ref-palette-primary80: #a8ceef;
+  --md-ref-palette-primary90: #d4e4ff;
+  --md-ref-palette-primary95: #eaf1ff;
+  --md-ref-palette-primary99: #fdfbff;
+  --md-ref-palette-primary100: #ffffff;
+
+  /* Secondary Color - Complementary Orange */
+  --md-sys-color-secondary: #ff8c42;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #ffdcc5;
+  --md-sys-color-on-secondary-container: #3a1a00;
+
+  /* Tertiary Color - Teal */
+  --md-sys-color-tertiary: #00a896;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #bff0e9;
+  --md-sys-color-on-tertiary-container: #00201c;
+
+  /* Error Colors */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* Success Colors */
+  --md-sys-color-success: #006e26;
+  --md-sys-color-on-success: #ffffff;
+  --md-sys-color-success-container: #73ff8f;
+  --md-sys-color-on-success-container: #002106;
+
+  /* Warning Colors */
+  --md-sys-color-warning: #f9a825;
+  --md-sys-color-on-warning: #3e2e00;
+  --md-sys-color-warning-container: #ffe08a;
+  --md-sys-color-on-warning-container: #261900;
+
+  /* Surface Colors */
+  --md-sys-color-surface: #fdfbff;
+  --md-sys-color-on-surface: #1a1b1e;
+  --md-sys-color-surface-variant: #e1e2ec;
+  --md-sys-color-on-surface-variant: #44474e;
+
+  /* Background Colors */
+  --md-sys-color-background: #fdfbff;
+  --md-sys-color-on-background: #1a1b1e;
+
+  /* Outline */
+  --md-sys-color-outline: #74777f;
+  --md-sys-color-outline-variant: #c4c6d0;
+
+  /* Surface Tint */
+  --md-sys-color-surface-tint: var(--md-sys-color-primary);
+  --md-sys-color-surface-tint-color: var(--md-sys-color-primary);
+
+  /* Inverse Colors */
+  --md-sys-color-inverse-surface: #2f3033;
+  --md-sys-color-inverse-on-surface: #f1f0f4;
+  --md-sys-color-inverse-primary: #a8ceef;
+
+  /* Scrim */
+  --md-sys-color-scrim: #000000;
+
+  /* Surface Levels */
+  --md-sys-color-surface-level-0: var(--md-sys-color-surface);
+  --md-sys-color-surface-level-1: color-mix(in srgb, var(--md-sys-color-primary) 5%, var(--md-sys-color-surface));
+  --md-sys-color-surface-level-2: color-mix(in srgb, var(--md-sys-color-primary) 8%, var(--md-sys-color-surface));
+  --md-sys-color-surface-level-3: color-mix(in srgb, var(--md-sys-color-primary) 11%, var(--md-sys-color-surface));
+  --md-sys-color-surface-level-4: color-mix(in srgb, var(--md-sys-color-primary) 12%, var(--md-sys-color-surface));
+  --md-sys-color-surface-level-5: color-mix(in srgb, var(--md-sys-color-primary) 14%, var(--md-sys-color-surface));
+
+  /* Shape Radius */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* Motion Easing */
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+  --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+
+  /* Motion Duration */
+  --md-sys-motion-duration-short1: 50ms;
+  --md-sys-motion-duration-short2: 100ms;
+  --md-sys-motion-duration-short3: 150ms;
+  --md-sys-motion-duration-short4: 200ms;
+  --md-sys-motion-duration-medium1: 250ms;
+  --md-sys-motion-duration-medium2: 300ms;
+  --md-sys-motion-duration-medium3: 350ms;
+  --md-sys-motion-duration-medium4: 400ms;
+  --md-sys-motion-duration-long1: 450ms;
+  --md-sys-motion-duration-long2: 500ms;
+  --md-sys-motion-duration-long3: 550ms;
+  --md-sys-motion-duration-long4: 600ms;
+  --md-sys-motion-duration-extra-long1: 700ms;
+  --md-sys-motion-duration-extra-long2: 800ms;
+  --md-sys-motion-duration-extra-long3: 900ms;
+  --md-sys-motion-duration-extra-long4: 1000ms;
+
+  /* Typography Scale */
+  --md-sys-typescale-display-large-size: 57px;
+  --md-sys-typescale-display-large-line-height: 64px;
+  --md-sys-typescale-display-medium-size: 45px;
+  --md-sys-typescale-display-medium-line-height: 52px;
+  --md-sys-typescale-display-small-size: 36px;
+  --md-sys-typescale-display-small-line-height: 44px;
+  
+  --md-sys-typescale-headline-large-size: 32px;
+  --md-sys-typescale-headline-large-line-height: 40px;
+  --md-sys-typescale-headline-medium-size: 28px;
+  --md-sys-typescale-headline-medium-line-height: 36px;
+  --md-sys-typescale-headline-small-size: 24px;
+  --md-sys-typescale-headline-small-line-height: 32px;
+  
+  --md-sys-typescale-title-large-size: 22px;
+  --md-sys-typescale-title-large-line-height: 28px;
+  --md-sys-typescale-title-medium-size: 16px;
+  --md-sys-typescale-title-medium-line-height: 24px;
+  --md-sys-typescale-title-small-size: 14px;
+  --md-sys-typescale-title-small-line-height: 20px;
+  
+  --md-sys-typescale-body-large-size: 16px;
+  --md-sys-typescale-body-large-line-height: 24px;
+  --md-sys-typescale-body-medium-size: 14px;
+  --md-sys-typescale-body-medium-line-height: 20px;
+  --md-sys-typescale-body-small-size: 12px;
+  --md-sys-typescale-body-small-line-height: 16px;
+  
+  --md-sys-typescale-label-large-size: 14px;
+  --md-sys-typescale-label-large-line-height: 20px;
+  --md-sys-typescale-label-medium-size: 12px;
+  --md-sys-typescale-label-medium-line-height: 16px;
+  --md-sys-typescale-label-small-size: 11px;
+  --md-sys-typescale-label-small-line-height: 16px;
+
+  /* Font Weights */
+  --md-sys-typescale-display-weight: 400;
+  --md-sys-typescale-headline-weight: 400;
+  --md-sys-typescale-title-weight: 500;
+  --md-sys-typescale-body-weight: 400;
+  --md-sys-typescale-label-weight: 500;
+
+  /* State Layer Opacity */
+  --md-sys-state-hover-opacity: 0.08;
+  --md-sys-state-focus-opacity: 0.12;
+  --md-sys-state-pressed-opacity: 0.12;
+  --md-sys-state-dragged-opacity: 0.16;
+  --md-sys-state-disabled-opacity: 0.38;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #a8ceef;
+    --md-sys-color-on-primary: #003355;
+    --md-sys-color-primary-container: #004a77;
+    --md-sys-color-on-primary-container: #d4e4ff;
+    
+    --md-sys-color-secondary: #ffb894;
+    --md-sys-color-on-secondary: #5d2f00;
+    --md-sys-color-secondary-container: #844400;
+    --md-sys-color-on-secondary-container: #ffdcc5;
+    
+    --md-sys-color-tertiary: #6ddecf;
+    --md-sys-color-on-tertiary: #003731;
+    --md-sys-color-tertiary-container: #00504a;
+    --md-sys-color-on-tertiary-container: #bff0e9;
+    
+    --md-sys-color-error: #ffb4ab;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffdad6;
+    
+    --md-sys-color-surface: #1a1b1e;
+    --md-sys-color-on-surface: #e3e2e6;
+    --md-sys-color-surface-variant: #44474e;
+    --md-sys-color-on-surface-variant: #c4c6d0;
+    
+    --md-sys-color-background: #1a1b1e;
+    --md-sys-color-on-background: #e3e2e6;
+    
+    --md-sys-color-outline: #8e9099;
+    --md-sys-color-outline-variant: #44474e;
+    
+    --md-sys-color-inverse-surface: #e3e2e6;
+    --md-sys-color-inverse-on-surface: #1a1b1e;
+    --md-sys-color-inverse-primary: #227bb7;
+    
+    /* Dark theme surface levels */
+    --md-sys-color-surface-level-0: #1a1b1e;
+    --md-sys-color-surface-level-1: #25262a;
+    --md-sys-color-surface-level-2: #2a2b2f;
+    --md-sys-color-surface-level-3: #303135;
+    --md-sys-color-surface-level-4: #313236;
+    --md-sys-color-surface-level-5: #35363b;
+  }
+}
+
+/* Elevation Shadows */
+.elevation-0 {
+  box-shadow: none;
+}
+
+.elevation-1 {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.elevation-2 {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+}
+
+.elevation-3 {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+.elevation-4 {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+}
+
+.elevation-5 {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* State Layers */
+.state-layer {
+  position: relative;
+  overflow: hidden;
+}
+
+.state-layer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+  pointer-events: none;
+}
+
+.state-layer:hover::before {
+  opacity: var(--md-sys-state-hover-opacity);
+  background-color: var(--md-sys-color-on-surface);
+}
+
+.state-layer:focus-visible::before {
+  opacity: var(--md-sys-state-focus-opacity);
+  background-color: var(--md-sys-color-on-surface);
+}
+
+.state-layer:active::before {
+  opacity: var(--md-sys-state-pressed-opacity);
+  background-color: var(--md-sys-color-on-surface);
+}
+
+/* Ripple Effect Base */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: currentColor;
+  transform: scale(0);
+  animation: ripple-animation var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-standard);
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

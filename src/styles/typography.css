@@ -1,0 +1,168 @@
+/* Material Design 3 Typography Utility Classes */
+
+/* Import Roboto Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Set Roboto as default font family */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Display Typography */
+.md-display-large {
+  @apply text-md-display-lg;
+}
+
+.md-display-medium {
+  @apply text-md-display-md;
+}
+
+.md-display-small {
+  @apply text-md-display-sm;
+}
+
+/* Headline Typography */
+.md-headline-large {
+  @apply text-md-headline-lg;
+}
+
+.md-headline-medium {
+  @apply text-md-headline-md;
+}
+
+.md-headline-small {
+  @apply text-md-headline-sm;
+}
+
+/* Title Typography */
+.md-title-large {
+  @apply text-md-title-lg;
+}
+
+.md-title-medium {
+  @apply text-md-title-md;
+}
+
+.md-title-small {
+  @apply text-md-title-sm;
+}
+
+/* Body Typography */
+.md-body-large {
+  @apply text-md-body-lg;
+}
+
+.md-body-medium {
+  @apply text-md-body-md;
+}
+
+.md-body-small {
+  @apply text-md-body-sm;
+}
+
+/* Label Typography */
+.md-label-large {
+  @apply text-md-label-lg;
+}
+
+.md-label-medium {
+  @apply text-md-label-md;
+}
+
+.md-label-small {
+  @apply text-md-label-sm;
+}
+
+/* Typography Helpers */
+.md-text-primary {
+  @apply text-md-on-background;
+}
+
+.md-text-secondary {
+  @apply text-md-on-surface-variant opacity-[0.74];
+}
+
+.md-text-tertiary {
+  @apply text-md-on-surface-variant opacity-[0.60];
+}
+
+.md-text-disabled {
+  @apply text-md-on-surface opacity-[0.38];
+}
+
+/* Text Utility Classes for Tailwind */
+.text-md-display-lg {
+  @apply md-display-large;
+}
+
+.text-md-display-md {
+  @apply md-display-medium;
+}
+
+.text-md-display-sm {
+  @apply md-display-small;
+}
+
+.text-md-headline-lg {
+  @apply md-headline-large;
+}
+
+.text-md-headline-md {
+  @apply md-headline-medium;
+}
+
+.text-md-headline-sm {
+  @apply md-headline-small;
+}
+
+.text-md-title-lg {
+  @apply md-title-large;
+}
+
+.text-md-title-md {
+  @apply md-title-medium;
+}
+
+.text-md-title-sm {
+  @apply md-title-small;
+}
+
+.text-md-body-lg {
+  @apply md-body-large;
+}
+
+.text-md-body-md {
+  @apply md-body-medium;
+}
+
+.text-md-body-sm {
+  @apply md-body-small;
+}
+
+.text-md-label-lg {
+  @apply md-label-large;
+}
+
+.text-md-label-md {
+  @apply md-label-medium;
+}
+
+.text-md-label-sm {
+  @apply md-label-small;
+}
+
+/* Responsive Typography */
+@media (max-width: 599px) {
+  /* Compact Layout Typography Adjustments */
+  .md-display-large {
+    @apply text-[45px] leading-[52px];
+  }
+  
+  .md-display-medium {
+    @apply text-[36px] leading-[44px];
+  }
+  
+  .md-headline-large {
+    @apply text-[28px] leading-[36px];
+  }
+}

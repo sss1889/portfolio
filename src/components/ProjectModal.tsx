@@ -7,6 +7,7 @@ import { useModal } from '../context/ModalContext';
 interface ProjectModalProps {
     title: React.ReactNode;
     image?: string | StaticImageData;
+    images?: (string | StaticImageData)[];
     description?: string;
     technologies?: string[];
     frameworks?: string[];
@@ -14,7 +15,7 @@ interface ProjectModalProps {
     onClose: () => void;
 }
 
-export default function ProjectModal({ title, image, description, technologies,frameworks, methodologies, onClose }: ProjectModalProps) {
+export default function ProjectModal({ title, image, images, description, technologies,frameworks, methodologies, onClose }: ProjectModalProps) {
     const { setIsAnyModalOpen } = useModal();
     
     useEffect(() => {
@@ -51,33 +52,66 @@ export default function ProjectModal({ title, image, description, technologies,f
                 <h2 className='justify-content mb-4 text-2xl font-bold border-l-4 border-[#227BB7] pl-2 text-[#227BB7]'>
                     {title}
                 </h2>
-                {image && (
-                    <div className='mb-4 flex justify-center'>
-                        {title === '配置最適化アルゴリズム開発' ? (
-                            <Image
-                                src={image}
-                                alt={title as string}
-                                width={450}
-                                height={250}
-                                className='rounded-lg border-2 p-2'
-                            />
-                        ) : title === '需要予測&在庫管理システム開発' ? (
-                            <Image
-                                src={image}
-                                alt={title as string}
-                                width={800}
-                                height={500}
-                                className='rounded-lg shadow-md'
-                            />
-                            
-                        ) : (
-                            <Image
-                                src={image}
-                                alt={title as string}
-                                width={250}
-                                height={450}
-                                className='rounded-lg'
-                            />
+                {(image || images) && (
+                    <div className='mb-4 flex justify-center gap-4 flex-wrap'>
+                        {images ? (
+                            images.map((img, index) => (
+                                <div key={index}>
+                                    {title === '配置最適化アルゴリズム開発' ? (
+                                        <Image
+                                            src={img}
+                                            alt={`${title} ${index + 1}`}
+                                            width={450}
+                                            height={250}
+                                            className='rounded-lg border-2 p-2'
+                                        />
+                                    ) : title === '需要予測&在庫管理システム開発' ? (
+                                        <Image
+                                            src={img}
+                                            alt={`${title} ${index + 1}`}
+                                            width={400}
+                                            height={250}
+                                            className='rounded-lg shadow-md'
+                                        />
+                                    ) : (
+                                        <Image
+                                            src={img}
+                                            alt={`${title} ${index + 1}`}
+                                            width={250}
+                                            height={450}
+                                            className='rounded-lg'
+                                        />
+                                    )}
+                                </div>
+                            ))
+                        ) : image && (
+                            <>
+                                {title === '配置最適化アルゴリズム開発' ? (
+                                    <Image
+                                        src={image}
+                                        alt={title as string}
+                                        width={450}
+                                        height={250}
+                                        className='rounded-lg border-2 p-2'
+                                    />
+                                ) : title === '需要予測&在庫管理システム開発' ? (
+                                    <Image
+                                        src={image}
+                                        alt={title as string}
+                                        width={800}
+                                        height={500}
+                                        className='rounded-lg shadow-md'
+                                    />
+                                ) : (
+                                    <Image
+                                        src={image}
+                                        alt={title as string}
+                                        width={250}
+                                        height={450}
+                                        className='rounded-lg'
+                                    />
+                                )}
+                            </>
                         )}
                     </div>
                 )}

@@ -7,13 +7,14 @@ import { StaticImageData } from 'next/image';
 interface ProjectButtonProps {
   children: React.ReactNode;
   image?: string | StaticImageData;
+  images?: (string | StaticImageData)[];
   description?: string;
   technologies?: string[];
   frameworks?: string[];
   methodologies?: string[];
 }
 
-export default function ProjectButton({ children, image, description, technologies, frameworks, methodologies}: ProjectButtonProps) {
+export default function ProjectButton({ children, image, images, description, technologies, frameworks, methodologies}: ProjectButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -44,6 +45,7 @@ export default function ProjectButton({ children, image, description, technologi
         <ProjectModal
             title={children}
             image={image}
+            images={images}
             description={description}
             technologies={technologies}
             frameworks={frameworks}

@@ -27,6 +27,7 @@ import starupIcon from "../image/starup.png";
 import kanjiIcon from "../image/projects/kanji_app.png";
 import nestingIcon from "../image/projects/nesting.png";
 import demandIcon from "../image/projects/demand.png";
+import demand2Icon from "../image/projects/demand2.png";
 
 
 export default function Home() {
@@ -327,7 +328,7 @@ export default function Home() {
                 配置最適化アルゴリズム開発
               </ProjectButton>
               <ProjectButton
-                image={demandIcon}
+                images={[demandIcon, demand2Icon]}
                 description="大手メーカー商品のECサイト売上データをもとに、需要予測と発注最適化を行うToB向けシステムを開発しました。
                 バックエンド統括として、Python/FastAPIを用いたAPI/DB設計と実装を担当し、セール状況を考慮した8週間先までの売上予測ロジックと最適在庫算出アルゴリズムを実装しました。
                 4週間のリードタイムを考慮した自動発注提案フローを構築し、発注業務の大幅な効率化と在庫最適化に貢献することができました。
