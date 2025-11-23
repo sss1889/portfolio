@@ -16,6 +16,7 @@ interface ProjectButtonProps {
 
 export default function ProjectButton({ children, image, images, description, technologies, frameworks, methodologies}: ProjectButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -27,17 +28,35 @@ export default function ProjectButton({ children, image, images, description, te
 
   return (
     <>
-    <button onClick={openModal} className="w-full group">
-      <div className="bg-[#FDFBCB] text-[#227BB7] p-3 rounded-lg border-2 border-[#227BB7]/10 shadow-md 
-      hover:shadow-lg hover:bg-[#f5f3b8] hover:border-[#227BB7]/30 hover:-translate-y-1 
-      active:translate-y-0 active:shadow-sm 
-      transition-all duration-300 text-left relative overflow-hidden">
-        <div className="font-semibold">{children}</div>
-        <div className="absolute bottom-0 right-0 w-6 h-full flex items-center justify-center opacity-70 bg-[#227BB7]/10 rounded-tl-lg rounded-bl-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[#227BB7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button
+      onClick={openModal}
+      className="w-full group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="bg-bg-dark/60 text-white p-4 rounded-lg border-2 border-neon-blue/30
+      hover:border-neon-blue/70 hover:shadow-neon-blue
+      active:scale-[0.98]
+      transition-all duration-300 text-left relative overflow-hidden backdrop-blur-sm">
+        <div className="font-mono font-semibold text-sm md:text-base relative z-10">
+          {children}
+        </div>
+
+        {/* Animated corner decoration */}
+        <div className={`absolute top-0 right-0 w-16 h-16 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-50'}`}>
+          <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-neon-blue to-transparent"></div>
+          <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-neon-blue to-transparent"></div>
+        </div>
+
+        {/* Arrow icon */}
+        <div className={`absolute bottom-2 right-2 transition-all duration-300 ${isHovered ? 'translate-x-1' : ''}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-neon-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
+
+        {/* Scanline effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
       </div>
     </button>
 

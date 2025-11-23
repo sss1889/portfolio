@@ -8,56 +8,96 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary colors
+        // Cyberpunk Color Palette
+        'bg-dark': '#0a0b1e',
+        'neon-blue': '#00f0ff',
+        'neon-purple': '#bd00ff',
+        'neon-teal': '#00ffc3',
+        'neon-pink': '#ff00ff',
+        'text-dim': '#8892b0',
+
+        // Material Design 3 colors (preserved for existing components)
         'md-primary': 'var(--md-sys-color-primary)',
         'md-on-primary': 'var(--md-sys-color-on-primary)',
         'md-primary-container': 'var(--md-sys-color-primary-container)',
         'md-on-primary-container': 'var(--md-sys-color-on-primary-container)',
-        
-        // Secondary colors
         'md-secondary': 'var(--md-sys-color-secondary)',
         'md-on-secondary': 'var(--md-sys-color-on-secondary)',
         'md-secondary-container': 'var(--md-sys-color-secondary-container)',
         'md-on-secondary-container': 'var(--md-sys-color-on-secondary-container)',
-        
-        // Tertiary colors
         'md-tertiary': 'var(--md-sys-color-tertiary)',
         'md-on-tertiary': 'var(--md-sys-color-on-tertiary)',
         'md-tertiary-container': 'var(--md-sys-color-tertiary-container)',
         'md-on-tertiary-container': 'var(--md-sys-color-on-tertiary-container)',
-        
-        // Error colors
         'md-error': 'var(--md-sys-color-error)',
         'md-on-error': 'var(--md-sys-color-on-error)',
         'md-error-container': 'var(--md-sys-color-error-container)',
         'md-on-error-container': 'var(--md-sys-color-on-error-container)',
-        
-        // Surface colors
         'md-surface': 'var(--md-sys-color-surface)',
         'md-on-surface': 'var(--md-sys-color-on-surface)',
         'md-surface-variant': 'var(--md-sys-color-surface-variant)',
         'md-on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
-        
-        // Background colors
         'md-background': 'var(--md-sys-color-background)',
         'md-on-background': 'var(--md-sys-color-on-background)',
-        
-        // Outline colors
         'md-outline': 'var(--md-sys-color-outline)',
         'md-outline-variant': 'var(--md-sys-color-outline-variant)',
-        
-        // Inverse colors
         'md-inverse-surface': 'var(--md-sys-color-inverse-surface)',
         'md-inverse-on-surface': 'var(--md-sys-color-inverse-on-surface)',
         'md-inverse-primary': 'var(--md-sys-color-inverse-primary)',
-        
-        // Surface levels
         'md-surface-level-0': 'var(--md-sys-color-surface-level-0)',
         'md-surface-level-1': 'var(--md-sys-color-surface-level-1)',
         'md-surface-level-2': 'var(--md-sys-color-surface-level-2)',
         'md-surface-level-3': 'var(--md-sys-color-surface-level-3)',
         'md-surface-level-4': 'var(--md-sys-color-surface-level-4)',
         'md-surface-level-5': 'var(--md-sys-color-surface-level-5)',
+      },
+      fontFamily: {
+        'pixel': ['"Press Start 2P"', 'cursive'],
+        'mono': ['"Roboto Mono"', 'monospace'],
+      },
+      boxShadow: {
+        'neon-blue': '0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3)',
+        'neon-purple': '0 0 10px rgba(189, 0, 255, 0.5), 0 0 20px rgba(189, 0, 255, 0.3)',
+        'neon-teal': '0 0 10px rgba(0, 255, 195, 0.5), 0 0 20px rgba(0, 255, 195, 0.3)',
+        'neon-pink': '0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3)',
+      },
+      keyframes: {
+        'pulse-neon': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
+        'glitch': {
+          '0%': { transform: 'translate(0)' },
+          '20%': { transform: 'translate(-2px, 2px)' },
+          '40%': { transform: 'translate(-2px, -2px)' },
+          '60%': { transform: 'translate(2px, 2px)' },
+          '80%': { transform: 'translate(2px, -2px)' },
+          '100%': { transform: 'translate(0)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'fadeIn': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slideInLeft': {
+          '0%': { opacity: '0', transform: 'translateX(-30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slideInRight': {
+          '0%': { opacity: '0', transform: 'translateX(30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+        'glitch': 'glitch 0.3s ease-in-out infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'fadeIn': 'fadeIn 0.6s ease-out forwards',
+        'slideInLeft': 'slideInLeft 0.6s ease-out forwards',
+        'slideInRight': 'slideInRight 0.6s ease-out forwards',
       },
       borderRadius: {
         'md-none': 'var(--md-sys-shape-corner-none)',
@@ -69,7 +109,6 @@ module.exports = {
         'md-full': 'var(--md-sys-shape-corner-full)',
       },
       fontSize: {
-        // Display
         'md-display-lg': ['var(--md-sys-typescale-display-large-size)', {
           lineHeight: 'var(--md-sys-typescale-display-large-line-height)',
           fontWeight: 'var(--md-sys-typescale-display-weight)',
@@ -82,8 +121,6 @@ module.exports = {
           lineHeight: 'var(--md-sys-typescale-display-small-line-height)',
           fontWeight: 'var(--md-sys-typescale-display-weight)',
         }],
-        
-        // Headline
         'md-headline-lg': ['var(--md-sys-typescale-headline-large-size)', {
           lineHeight: 'var(--md-sys-typescale-headline-large-line-height)',
           fontWeight: 'var(--md-sys-typescale-headline-weight)',
@@ -96,8 +133,6 @@ module.exports = {
           lineHeight: 'var(--md-sys-typescale-headline-small-line-height)',
           fontWeight: 'var(--md-sys-typescale-headline-weight)',
         }],
-        
-        // Title
         'md-title-lg': ['var(--md-sys-typescale-title-large-size)', {
           lineHeight: 'var(--md-sys-typescale-title-large-line-height)',
           fontWeight: 'var(--md-sys-typescale-title-weight)',
@@ -110,8 +145,6 @@ module.exports = {
           lineHeight: 'var(--md-sys-typescale-title-small-line-height)',
           fontWeight: 'var(--md-sys-typescale-title-weight)',
         }],
-        
-        // Body
         'md-body-lg': ['var(--md-sys-typescale-body-large-size)', {
           lineHeight: 'var(--md-sys-typescale-body-large-line-height)',
           fontWeight: 'var(--md-sys-typescale-body-weight)',
@@ -124,8 +157,6 @@ module.exports = {
           lineHeight: 'var(--md-sys-typescale-body-small-line-height)',
           fontWeight: 'var(--md-sys-typescale-body-weight)',
         }],
-        
-        // Label
         'md-label-lg': ['var(--md-sys-typescale-label-large-size)', {
           lineHeight: 'var(--md-sys-typescale-label-large-line-height)',
           fontWeight: 'var(--md-sys-typescale-label-weight)',
@@ -162,12 +193,14 @@ module.exports = {
         'md-long-4': 'var(--md-sys-motion-duration-long4)',
       },
       screens: {
-        // Material Design 3 Adaptive Layout Breakpoints
-        'compact': '0px',     // 0-599dp
-        'medium': '600px',    // 600-839dp  
-        'expanded': '840px',  // 840dp+
-        'large': '1200px',    // Large screens
-        'xlarge': '1600px',   // Extra large screens
+        'compact': '0px',
+        'medium': '600px',
+        'expanded': '840px',
+        'large': '1200px',
+        'xlarge': '1600px',
+      },
+      maxWidth: {
+        'container': '1500px',
       },
     },
   },

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0b1e;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -13,53 +14,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Exo', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
-/* 黄色っぽい背景色のアニメーション */
-@keyframes yellowGradientAnimation {
-  0% {
-    background-color: #FFF9C4;
-  }
-  25% {
-    background-color: #FEFCE6; 
-  }
-  50% {
-    background-color: #FFFDE7;
-  }
-  75% {
-    background-color: #FFF8E1;
-  }
-  100% {
-    background-color: #FFF9C4;
-  }
+/* Pixelated rendering for pixel art elements */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
-.animated-yellow-bg {
-  animation: yellowGradientAnimation 10s infinite ease-in-out;
-}
-
-
-/* 浮遊する円のアニメーション */
-.area {
-  background: #FFFDE7;
-
-  width: 100%;
-  min-height: 100vh;
+/* Cyberpunk circuit pattern background */
+.cyberpunk-bg {
+  background: #0a0b1e;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
   position: relative;
 }
 
-.circles {
+.cyberpunk-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(189, 0, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Floating neon particles */
+.neon-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,181 +58,112 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+  pointer-events: none;
 }
 
-.circles li {
+.neon-particles li {
   position: absolute;
   display: block;
   list-style: none;
-  background: rgba(34, 123, 183, 0.2);
-  animation: animate 25s linear infinite;
+  background: rgba(0, 240, 255, 0.3);
+  animation: neonFloat 25s linear infinite;
   bottom: -150px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
-.circles li:nth-child(1) {
+.neon-particles li:nth-child(odd) {
+  background: rgba(189, 0, 255, 0.3);
+  box-shadow: 0 0 10px rgba(189, 0, 255, 0.5);
+}
+
+.neon-particles li:nth-child(1) {
   left: 25%;
-  width: 80px;
-  height: 80px;
+  width: 6px;
+  height: 6px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(2) {
+.neon-particles li:nth-child(2) {
   left: 10%;
-  width: 20px;
-  height: 20px;
+  width: 4px;
+  height: 4px;
   animation-delay: 2s;
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3) {
+.neon-particles li:nth-child(3) {
   left: 70%;
-  width: 20px;
-  height: 20px;
+  width: 4px;
+  height: 4px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(4) {
+.neon-particles li:nth-child(4) {
   left: 40%;
-  width: 60px;
-  height: 60px;
+  width: 8px;
+  height: 8px;
   animation-delay: 0s;
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5) {
+.neon-particles li:nth-child(5) {
   left: 65%;
-  width: 20px;
-  height: 20px;
+  width: 4px;
+  height: 4px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6) {
+.neon-particles li:nth-child(6) {
   left: 75%;
-  width: 110px;
-  height: 110px;
+  width: 6px;
+  height: 6px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7) {
+.neon-particles li:nth-child(7) {
   left: 35%;
-  width: 150px;
-  height: 150px;
+  width: 8px;
+  height: 8px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8) {
+.neon-particles li:nth-child(8) {
   left: 50%;
-  width: 25px;
-  height: 25px;
+  width: 5px;
+  height: 5px;
   animation-delay: 15s;
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9) {
+.neon-particles li:nth-child(9) {
   left: 20%;
-  width: 15px;
-  height: 15px;
+  width: 3px;
+  height: 3px;
   animation-delay: 2s;
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10) {
+.neon-particles li:nth-child(10) {
   left: 85%;
-  width: 150px;
-  height: 150px;
+  width: 6px;
+  height: 6px;
   animation-delay: 0s;
   animation-duration: 11s;
 }
 
-.circles li:nth-child(11) {
-  left: 15%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 1s;
-  animation-duration: 22s;
-}
-
-.circles li:nth-child(12) {
-  left: 60%;
-  width: 30px;
-  height: 30px;
-  animation-delay: 5s;
-  animation-duration: 15s;
-}
-
-.circles li:nth-child(13) {
-  left: 90%;
-  width: 55px;
-  height: 55px;
-  animation-delay: 3s;
-  animation-duration: 20s;
-}
-
-.circles li:nth-child(14) {
-  left: 30%;
-  width: 40px;
-  height: 40px;
-  animation-delay: 8s;
-  animation-duration: 14s;
-}
-
-.circles li:nth-child(15) {
-  left: 5%;
-  width: 130px;
-  height: 130px;
-  animation-delay: 6s;
-  animation-duration: 25s;
-}
-
-.circles li:nth-child(16) {
-  left: 45%;
-  width: 70px;
-  height: 70px;
-  animation-delay: 10s;
-  animation-duration: 17s;
-}
-
-.circles li:nth-child(17) {
-  left: 80%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 4s;
-  animation-duration: 13s;
-}
-
-.circles li:nth-child(18) {
-  left: 55%;
-  width: 120px;
-  height: 120px;
-  animation-delay: 9s;
-  animation-duration: 24s;
-}
-
-.circles li:nth-child(19) {
-  left: 25%;
-  width: 35px;
-  height: 35px;
-  animation-delay: 7s;
-  animation-duration: 16s;
-}
-
-.circles li:nth-child(20) {
-  left: 70%;
-  width: 90px;
-  height: 90px;
-  animation-delay: 2s;
-  animation-duration: 19s;
-}
-
-@keyframes animate {
+@keyframes neonFloat {
   0% {
     transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
     opacity: 1;
-    border-radius: 0;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
     transform: translateY(-2000px) rotate(720deg);
     opacity: 0;
-    border-radius: 50%;
   }
 }

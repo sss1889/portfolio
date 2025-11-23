@@ -219,7 +219,7 @@ export const SkillsSection: React.FC = () => {
             <ExperienceItem
               title="Student"
               company="京都大学工学部情報学科"
-              period="2021.04 - 2027.03"
+              period="2021.04 - 2026.03"
               description="数理工学を専攻し、数学・物理学を基盤とした統計学、最適化理論、制御理論、コンピュータ科学などの応用数理分野を幅広く学習。理論と実践の両面からプログラミングとアルゴリズム設計の基礎を習得。"
               index={2}
             />
