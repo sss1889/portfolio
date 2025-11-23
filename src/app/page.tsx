@@ -1,6 +1,5 @@
 'use client';
 
-import ProjectCard from "../components/ProjectCard";
 import SectionCard from "../components/cyberpunk/SectionCard";
 import SkillsShowcase from "../components/cyberpunk/SkillsShowcase";
 import Timeline from "../components/cyberpunk/Timeline";
@@ -32,12 +31,6 @@ import mailIcon from "../image/icons8-mail-48.png";
 import markerIcon from "../image/icons8-marker-48.png";
 import ucscIcon from "../image/ucsc.png";
 import kyotouniIcon from "../image/Kyoto_University.png";
-import starupIcon from "../image/starup.png";
-
-import kanjiIcon from "../image/projects/kanji_app.png";
-import nestingIcon from "../image/projects/nesting.png";
-import demandIcon from "../image/projects/demand.png";
-import demand2Icon from "../image/projects/demand2.png";
 import starupLogo from "../image/starup.svg";
 
 function HomeContent() {
@@ -47,7 +40,6 @@ function HomeContent() {
   const summaryAnim = useScrollAnimation();
   const educationAnim = useScrollAnimation();
   const workAnim = useScrollAnimation();
-  const projectsAnim = useScrollAnimation();
   const skillsAnim = useScrollAnimation();
   const skills = [
     { name: 'React', level: 2, icon: reactIcon, category: 'frontend' as const },
